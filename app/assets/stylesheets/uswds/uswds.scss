@@ -1,49 +1,77 @@
-/*! uswds 1.6.4 */
+/*! uswds @version */
 
-// Relative font and image file paths
-$font-path:  'uswds';
-$image-path: 'uswds';
+/*
+========================================
+uswds.scss
+----------------------------------------
+Output all USWDS
+- fonts
+- components
+- utilities
+- layout grid
+----------------------------------------
+*/
 
-// Set $asset-pipeline to true if you're using the Rails Asset Pipeline
-$asset-pipeline: true;
+// Settings
+// -------------------------------------
+@import 'settings/settings-general';
+@import 'settings/settings-typography';
+@import 'settings/settings-color';
+@import 'settings/settings-spacing';
+@import 'settings/settings-utilities';
+@import 'settings/settings-components';
 
-// Vendor -------------- //
-@import 'uswds/core/variables-vendor';
-@import 'bourbon';
-@import 'neat';
-@import 'normalize-css';
+// Tools
+// -------------------------------------
+@import 'core/functions';
+@import 'core/system-tokens';
+@import 'core/variables';
+@import 'core/properties';
+@import 'core/mixins/all';
 
-// Core -------------- //
-@import 'uswds/core/variables';
-@import 'uswds/core/fonts';
-@import 'uswds/core/grid';
-@import 'uswds/core/utilities';
-@import 'uswds/core/base';
+// Generic
+// -------------------------------------
+@import 'core/font-face';
+@import 'lib/normalize';
+@import 'core/base';
 
-// Elements -------------- //
-// Styles basic HTML elements
-@import 'uswds/elements/buttons';
-@import 'uswds/elements/embed';
-@import 'uswds/elements/figure';
-@import 'uswds/elements/inputs';
-@import 'uswds/elements/labels';
-@import 'uswds/elements/list';
-@import 'uswds/elements/table';
-@import 'uswds/elements/typography';
+// Elements
+// -------------------------------------
+@import 'elements/buttons';
+@import 'elements/embed';
+@import 'elements/figure';
+@import 'elements/inputs';
+@import 'elements/list';
+@import 'elements/table';
+@import 'elements/tags';
+@import 'elements/typography';
 
-// Components -------------- //
-@import 'uswds/components/accordions';
-@import 'uswds/components/alerts';
-@import 'uswds/components/banner';
-@import 'uswds/components/footer';
-@import 'uswds/components/forms';
-@import 'uswds/components/graphic-list';
-@import 'uswds/components/header';
-@import 'uswds/components/hero';
-@import 'uswds/components/layout';
-@import 'uswds/components/media-block';
-@import 'uswds/components/navigation';
-@import 'uswds/components/search';
-@import 'uswds/components/section';
-@import 'uswds/components/sidenav';
-@import 'uswds/components/skipnav';
+// Components
+// -------------------------------------
+@import 'components/accordions';
+@import 'components/alerts';
+@import 'components/banner';
+@import 'components/checklist';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/graphic-list';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/layout';
+@import 'components/media-block';
+@import 'components/navigation';
+@import 'components/search';
+@import 'components/section';
+@import 'components/sidenav';
+@import 'components/skipnav';
+
+// Layout grid
+// -------------------------------------
+@import 'core/layout-grid';
+
+// Utilities
+// -------------------------------------
+@import 'utilities/palettes/all';
+@import 'utilities/rules/all';
+@import 'utilities/rules/package';
+@include render-utilities-in($utilities-package);
