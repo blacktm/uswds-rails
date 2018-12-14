@@ -13,12 +13,13 @@ There are several ways in which you can help improve this project:
 - [Getting Started](#getting-started)
 - [Making Changes](#making-changes)
 - [Code Style](#code-style)
+- [Updating the U.S. Web Design System version](#updating-the-us-web-design-system-version)
 
 ## Getting Started
 
-uswds-rails is written in [Ruby](https://www.ruby-lang.org/en/) (version 2.5.1) and development dependencies are managed using the [Bundler](http://bundler.io) gem. [Travis CI builds](https://travis-ci.org/jgarber623/uswds-rails) use Ruby 2.2.9, 2.3.7, 2.4.4, and 2.5.1.
+uswds-rails is written in [Ruby](https://www.ruby-lang.org/en/) (version 2.6.2) and development dependencies are managed using the [Bundler](http://bundler.io) gem. [Travis CI builds](https://travis-ci.org/jgarber623/uswds-rails) use Ruby 2.5.5 and 2.6.2.
 
-I manage Ruby versions with [rbenv](https://github.com/rbenv/rbenv). I'd recommend you do the same or use a similar Ruby version manager ([chruby](https://github.com/postmodern/chruby) or [RVM](https://rvm.io) come to mind). Once you've installed Ruby 2.5.1 using your method of choice, install the project's gems by running:
+I manage Ruby versions with [rbenv](https://github.com/rbenv/rbenv). I'd recommend you do the same or use a similar Ruby version manager ([chruby](https://github.com/postmodern/chruby) or [RVM](https://rvm.io) come to mind). Once you've installed Ruby 2.6.2 using your method of choice, install the project's gems by running:
 
 ```sh
 bundle install
@@ -50,3 +51,24 @@ Your bug fix or feature addition won't be rejected if it runs afoul of any (or a
 [issues]: https://github.com/jgarber623/uswds-rails/issues
 [license]: https://github.com/jgarber623/uswds-rails/blob/master/LICENSE.md
 [pulls]: https://github.com/jgarber623/uswds-rails/pulls
+
+## Updating the U.S. Web Design System version
+
+To update this gem with the latest version of the U.S. Web Design System:
+
+1. Go to [designsystem.digital.gov/download](https://designsystem.digital.gov/download) and "download the code."
+
+2. In this gem, open the `vendor/assets/` directory. In the `fonts`, `images`, `javascripts`, and `stylesheets` directories, replace the contents of the `uswds` directory with the new assets.
+
+3. In the `vendor/assets/stylesheets/uswds/settings/_settings-general.scss` file, set both the `$theme-font-path` and `$theme-image-path` to be `'uswds'`, for example:
+
+    ```scss
+    $theme-font-path:  'uswds' !default;
+    $theme-image-path: 'uswds' !default;
+    ```
+
+4. In `vendor/assets/stylesheets/uswds/core/mixins/_font-face.scss`, replace `url()` with `font-url()`. Replace other instances of `url()` with `asset-url()`
+
+5. Replace the `app/assets/stylesheets/` directory with the updated `vendor/assets/stylesheets/`
+
+6. Update the gem version number in `lib/uswds/rails/version.rb`
