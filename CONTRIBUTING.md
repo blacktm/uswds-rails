@@ -17,9 +17,9 @@ There are several ways in which you can help improve this project:
 
 ## Getting Started
 
-uswds-rails is written in [Ruby](https://www.ruby-lang.org/en/) (version 2.5.3) and development dependencies are managed using the [Bundler](http://bundler.io) gem. [Travis CI builds](https://travis-ci.org/jgarber623/uswds-rails) use Ruby 2.3.8, 2.4.5, and 2.5.3.
+uswds-rails is written in [Ruby](https://www.ruby-lang.org/en/) (version 2.6.2) and development dependencies are managed using the [Bundler](http://bundler.io) gem. [Travis CI builds](https://travis-ci.org/jgarber623/uswds-rails) use Ruby 2.5.5 and 2.6.2.
 
-I manage Ruby versions with [rbenv](https://github.com/rbenv/rbenv). I'd recommend you do the same or use a similar Ruby version manager ([chruby](https://github.com/postmodern/chruby) or [RVM](https://rvm.io) come to mind). Once you've installed Ruby 2.5.3 using your method of choice, install the project's gems by running:
+I manage Ruby versions with [rbenv](https://github.com/rbenv/rbenv). I'd recommend you do the same or use a similar Ruby version manager ([chruby](https://github.com/postmodern/chruby) or [RVM](https://rvm.io) come to mind). Once you've installed Ruby 2.6.2 using your method of choice, install the project's gems by running:
 
 ```sh
 bundle install

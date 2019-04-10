@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'uswds/rails/version'
 
 Gem::Specification.new do |spec|
-  spec.required_ruby_version = ['>= 2.3.8', '< 2.6']
+  spec.required_ruby_version = '>= 2.5.5'
 
   spec.name          = 'uswds-rails'
   spec.version       = Uswds::Rails::VERSION
@@ -28,8 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'sass-rails', '~> 5.0', '>= 5.0.7'
   spec.add_development_dependency 'simplecov-console', '~> 0.4.2'
 
-  spec.add_runtime_dependency 'bourbon', '~> 5.1'
-  spec.add_runtime_dependency 'neat', '~> 3.0'
   spec.add_runtime_dependency 'rails-assets-normalize-css', '3.0.3'
-  spec.add_runtime_dependency 'autoprefixer-rails', '~> 9.4'
+  spec.add_runtime_dependency 'autoprefixer-rails', '~> 9.5'
 end

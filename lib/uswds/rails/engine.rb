@@ -1,5 +1,3 @@
-require 'bourbon'
-require 'neat'
 require 'rails-assets-normalize-css'
 require 'autoprefixer-rails'
 
